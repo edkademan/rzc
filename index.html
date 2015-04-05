@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title></title>
-<!-- 2015-04-04 Sat 21:34 -->
+<!-- 2015-04-05 Sun 12:15 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <style type="text/css">
@@ -380,14 +380,14 @@ frequency with which I noted gas and electricity
 consumption. Because Ensemble samples the temperature every 15
 minutes a period can include on the order of 200 different
 temperature readings. If \(t_1, t_2, \ldots, t_n\) are the temperature
-readings for a period then for \(i = 2,3,\ldots,n\) let
+readings for a period then for \(i = 1,2,\ldots,n-1\) let
 \[
-  t^*_i = (t_i+t_{i-1})/2,
+  t^*_i = (t_{i+1}+t_i)/2,
   \]
-let \(h_i\) be the length of time between readings \(i-1\) and \(i\), and
+let \(h_i\) be the length of time between readings \(i\) and \(i+1\), and
 finally let
 \[
-  x = \frac{\sum_2^n h_i(65-t^*_i)_+}{\sum_2^n h_i}
+  x = \frac{\sum_1^{n-1} h_i(65-t^*_i)_+}{\sum_1^{n-1} h_i}
   \]
 where the notation \((w)_+\) means that \((w)_+ = \max(0,w)\). Thus \(x\)
 is the average degrees below 65 for the period, or in other words,
@@ -509,7 +509,7 @@ where \(y\) is electricity consumption in kWh per day and the
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2015-04-04 Sat 21:34</p>
+<p class="date">Created: 2015-04-05 Sun 12:15</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
