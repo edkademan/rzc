@@ -4,21 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title></title>
-<!-- 2015-04-15 Wed 09:05 -->
+<!-- 2015-04-30 Thu 11:03 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="viewport" content="width=device-width, initial-scale=1" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
+  .title  { text-align: center; }
   .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
+  .done   { color: green; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
@@ -140,44 +133,66 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
     MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "0em",
+        displayIndent: "2em",
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
              }
-});
+        }
+    });
+/*]]>*///-->
 </script>
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <h1 class="title"></h1>
 
-<div id="outline-container-unnumbered-1" class="outline-2">
-<h2 id="unnumbered-1">Chapin Mill Energy</h2>
-<div class="outline-text-2" id="text-unnumbered-1">
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Chapin Mill Energy</h2>
+<div class="outline-text-2" id="text-1">
 <p>
 The plot below describes outdoor air temperatures and the rate of
 retreat center energy consumption for the past two months. These
 data come from
 </p>
 <ul class="org-ul">
-<li>the Ensemble HVAC system, and</li>
-<li>the gas and electric meters.</li>
+<li>the Ensemble HVAC system, and
+</li>
+<li>the gas and electric meters.
+</li>
 </ul>
 
 <p>
@@ -234,34 +249,38 @@ center of the cloud of points as temperature changes.
 </div>
 </div>
 
-<div id="outline-container-unnumbered-2" class="outline-3">
-<h3 id="unnumbered-2">Natural gas</h3>
-<div class="outline-text-3" id="text-unnumbered-2">
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Natural gas</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
 For a given level of occupancy of the retreat center it would be
 natural to consider gas consumption as consisting of two parts:
 </p>
 <ul class="org-ul">
 <li>a base rate that doesn't change significantly from day to day,
-and</li>
+and
+</li>
 <li>an additional rate that scales with the outdoor
-temperature. (The colder it gets the greater this part.)</li>
+temperature. (The colder it gets the greater this part.)
+</li>
 </ul>
+
 <p>
-However the analysis failed to find significant values for any base
-rates. This is almost certainly due to the limited range of outdoor
-air temperatures we have experienced in the relatively short time
-the data cover. You can't expect the models to extrapolate reliably
-to warm days where the furnaces no longer need to keep winter at
-bay. The requirement to maintain the heat dominates the consumption
-to the point where everything else is drowned out.
+Although I have included the base rate estimate in the analysis
+below it is only marginally significant. This is almost certainly
+due to the limited range of outdoor air temperatures we have
+experienced in the relatively short time the data cover. You can't
+expect the models to extrapolate reliably to warm days where the
+furnaces no longer need to keep winter at bay. The requirement to
+maintain the heat dominates the consumption to the point where
+everything else is drowned out.
 </p>
 
 <p>
-But the data do support estimates of scaling factors that apply to
-the outdoor temperatures. That is, the scaling factors relate gas
-consumption in ccf (100s of cubic feet) per day to degrees
-Fahrenheit. 95% confidence intervals are
+But the data do support robust estimates of scaling factors that
+apply to the outdoor temperatures. That is, the scaling factors
+relate gas consumption in ccf (100s of cubic feet) per day to
+degrees Fahrenheit. 95% confidence intervals are
 </p>
 
 <table border="2" cellpadding="3">
@@ -283,20 +302,20 @@ Fahrenheit. 95% confidence intervals are
 
 <tr>
 <td class="left">IdleScale</td>
-<td class="right">0.49</td>
-<td class="right">0.82</td>
+<td class="right">0.50</td>
+<td class="right">0.76</td>
 </tr>
 
 <tr>
 <td class="left">SesshinScale</td>
-<td class="right">1.11</td>
-<td class="right">1.50</td>
+<td class="right">1.13</td>
+<td class="right">1.44</td>
 </tr>
 
 <tr>
 <td class="left">SimtScale</td>
-<td class="right">1.42</td>
-<td class="right">2.53</td>
+<td class="right">1.45</td>
+<td class="right">2.39</td>
 </tr>
 </tbody>
 </table>
@@ -304,11 +323,23 @@ Fahrenheit. 95% confidence intervals are
 <p>
 Roughly speaking these imply that the incremental consumption
 associated with a 1 degree drop in outside air temperature is
-normally <code>0.65</code> ccf per day. During sesshin
-this increases by <code>100</code> percent to
-<code>1.31</code> ccf per day and during a SIMT retreat it
-increases by <code>202</code> percent to 
-<code>1.97</code> ccf per day.
+normally <code>0.63</code> ccf per day. During sesshin
+this increases by <code>103</code> percent to
+<code>1.28</code> ccf per day and during a SIMT retreat it
+increases by <code>204</code> percent to 
+<code>1.92</code> ccf per day.
+</p>
+
+<p>
+Historically the price per ccf of natural gas for Chapin Mill is
+<code>0.55</code> dollars. This implies that if the average
+outside air temperature is say 25 degrees Fahrenheit then the
+amount spent on gas per day during idle, sesshin and SIMT periods
+would be around
+<code>13.79</code>,
+<code>28.04</code>, and
+<code>41.87</code>
+dollars respectively.
 </p>
 
 <p>
@@ -328,9 +359,9 @@ either idle, sesshin, or SIMT.)
 </div>
 </div>
 
-<div id="outline-container-unnumbered-3" class="outline-3">
-<h3 id="unnumbered-3">Electricity</h3>
-<div class="outline-text-3" id="text-unnumbered-3">
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Electricity</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
 There was no discernable relationship between electricity usage and
 outside air temperature. The data only established separate
@@ -357,39 +388,50 @@ occupied periods.
 
 <tr>
 <td class="left">Idle</td>
-<td class="right">106.11</td>
-<td class="right">121.26</td>
+<td class="right">105.46</td>
+<td class="right">118.53</td>
 </tr>
 
 <tr>
 <td class="left">Sesshin</td>
-<td class="right">278.59</td>
-<td class="right">311.80</td>
+<td class="right">279.46</td>
+<td class="right">310.93</td>
 </tr>
 
 <tr>
 <td class="left">SIMT</td>
-<td class="right">208.88</td>
-<td class="right">251.74</td>
+<td class="right">210.00</td>
+<td class="right">250.63</td>
 </tr>
 </tbody>
 </table>
 
 <p>
-On average the retreat center consumes <code>114</code> kWh per
+On average the retreat center consumes <code>112</code> kWh per
 day outside sesshin.  During sesshin this increases by
-<code>160</code> percent to <code>295</code> kWh per day
+<code>164</code> percent to <code>295</code> kWh per day
 and during a SIMT retreat the corresponding increase is
-<code>103</code> percent to <code>230</code> kWh
+<code>106</code> percent to <code>230</code> kWh
 per day.
+</p>
+
+<p>
+The average price of electricity for Chapin Mill has been
+<code>0.07</code> dollars per killowatt hour. Therefore the
+amound spent on electricity per day during idle, sesshin and SIMT
+periods is about
+<code>8.23</code>,
+<code>21.69</code>, and
+<code>16.92</code>
+dollars respectively.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-unnumbered-4" class="outline-2">
-<h2 id="unnumbered-4">Details</h2>
-<div class="outline-text-2" id="text-unnumbered-4">
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Details</h2>
+<div class="outline-text-2" id="text-2">
 <p>
 The natural gas model is
 \[
@@ -462,33 +504,33 @@ follows:
 
 <tr>
 <td class="left">&alpha;<sub>0</sub></td>
-<td class="right">4.49</td>
-<td class="right">3.05</td>
-<td class="right">1.47</td>
-<td class="right">0.15</td>
+<td class="right">5.34</td>
+<td class="right">2.24</td>
+<td class="right">2.38</td>
+<td class="right">0.02</td>
 </tr>
 
 <tr>
 <td class="left">&alpha;<sub>1</sub></td>
-<td class="right">0.65</td>
-<td class="right">0.08</td>
-<td class="right">7.72</td>
+<td class="right">0.63</td>
+<td class="right">0.07</td>
+<td class="right">9.50</td>
 <td class="right">0.00</td>
 </tr>
 
 <tr>
 <td class="left">&alpha;<sub>2</sub></td>
-<td class="right">1.31</td>
-<td class="right">0.10</td>
-<td class="right">13.24</td>
+<td class="right">1.28</td>
+<td class="right">0.08</td>
+<td class="right">15.93</td>
 <td class="right">0.00</td>
 </tr>
 
 <tr>
 <td class="left">&alpha;<sub>3</sub></td>
-<td class="right">1.97</td>
-<td class="right">0.28</td>
-<td class="right">6.98</td>
+<td class="right">1.92</td>
+<td class="right">0.24</td>
+<td class="right">8.01</td>
 <td class="right">0.00</td>
 </tr>
 </tbody>
@@ -535,25 +577,25 @@ where \(y\) is electricity consumption in kWh per day and the
 
 <tr>
 <td class="left">&beta;<sub>1</sub></td>
-<td class="right">113.69</td>
-<td class="right">3.87</td>
-<td class="right">29.41</td>
+<td class="right">111.99</td>
+<td class="right">3.33</td>
+<td class="right">33.60</td>
 <td class="right">0.00</td>
 </tr>
 
 <tr>
 <td class="left">&beta;<sub>2</sub></td>
 <td class="right">295.20</td>
-<td class="right">8.47</td>
-<td class="right">34.85</td>
+<td class="right">8.03</td>
+<td class="right">36.77</td>
 <td class="right">0.00</td>
 </tr>
 
 <tr>
 <td class="left">&beta;<sub>3</sub></td>
 <td class="right">230.31</td>
-<td class="right">10.93</td>
-<td class="right">21.06</td>
+<td class="right">10.36</td>
+<td class="right">22.22</td>
 <td class="right">0.00</td>
 </tr>
 </tbody>
@@ -563,7 +605,8 @@ where \(y\) is electricity consumption in kWh per day and the
 
 <p>
 <div id="postamble" class="status">
-<p class="date">Created: 2015-04-15 Wed 09:05</p>
+<p class="date">Created: 2015-04-30 Thu 11:03</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.50.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
