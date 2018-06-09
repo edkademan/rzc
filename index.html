@@ -3,22 +3,29 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title></title>
-<!-- 2018-05-30 Wed 07:46 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
+<!-- 2018-06-09 Sat 06:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -45,27 +52,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -85,6 +176,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <script type="text/javascript">
@@ -92,7 +184,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -133,70 +225,48 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "2em",
+        displayIndent: "0em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
              }
-        }
-    });
-/*]]>*///-->
+});
 </script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <h1 class="title"></h1>
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Chapin Mill Energy</h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Energy Consumption and Weather</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgdf219f4" class="outline-2">
+<h2 id="orgdf219f4">Chapin Mill Energy</h2>
+<div class="outline-text-2" id="text-orgdf219f4">
+</div>
+<div id="outline-container-org8c12979" class="outline-3">
+<h3 id="org8c12979">Energy Consumption and Weather</h3>
+<div class="outline-text-3" id="text-org8c12979">
 <p>
 The plot below describes outdoor air temperatures and the rate of
 retreat center energy consumption for the past few months. These
 data come from
 </p>
 <ul class="org-ul">
-<li>the Ensemble HVAC system,
-</li>
-<li>the National Oceanic and Atmospheric Administration (NOAA) and
-</li>
-<li>the gas and electric meters.
-</li>
+<li>the Ensemble HVAC system,</li>
+<li>the National Oceanic and Atmospheric Administration (NOAA) and</li>
+<li>the gas and electric meters.</li>
 </ul>
 
 <p>
@@ -214,13 +284,13 @@ plotted the range over time.
 </p>
 
 <p>
-Gas values are in thousands of cubic feet per day and electricity
+Gas values are in hundreds of cubic feet per day and electricity
 values are in killowatt hours per day. (So I guess that makes the
 units for electricity 1000/24 &asymp; 42 watts.) Using historical
-billing data we can estimate the price of gas and electricity and so
-can convert the two types to dollars and add them up. Thus one of
-the panels in the plot describes the rate of overall cost of energy
-consumption.
+billing data we can estimate the price of gas and electricity and
+so can convert the two types to dollars and add them up. Thus one
+of the panels in the plot describes the rate of overall cost of
+energy consumption.
 </p>
 
 
@@ -228,7 +298,6 @@ consumption.
 <p><img src="energy.png" alt="energy.png" />
 </p>
 </div>
-
 
 <p>
 Before modeling the data in a more formal way it might be useful to
@@ -248,9 +317,10 @@ dollar cost&#x2014;over all times of the year and over all events.
 <p>
 To be slightly more precise, 95% of the time the observed
 electricity power consumption was less than <code>311</code>
-kWh per day, gas consumption was less than <code>4.7</code>
-thousand cubic feet per day and the overall energy cost was less
-than <code>54</code> dollars per day.
+kWh per day, gas consumption was less than
+<code>47</code> hundred cubic feet per day and the
+overall energy cost was less than <code>54</code> dollars per
+day.
 </p>
 
 <p>
@@ -289,13 +359,10 @@ period is below. During that time span there were several different
 types of events including
 </p>
 <ul class="org-ul">
-<li>Rochester Zen Center sesshins,
-</li>
+<li>Rochester Zen Center sesshins,</li>
 <li>a  Satipaññā 
-     Insight Meditation Toronto (simt) retreat and
-</li>
-<li>a University of Rochester MBSR (ur) retreat.
-</li>
+Insight Meditation Toronto (simt) retreat and</li>
+<li>a University of Rochester MBSR (ur) retreat.</li>
 </ul>
 
 <p>
@@ -313,7 +380,6 @@ heated for sesshin setup.)
 <p><img src="energy2.png" alt="energy2.png" />
 </p>
 </div>
-
 
 <p>
 If you look carefully at the above plots you may notice&#x2014;as you
@@ -340,20 +406,18 @@ the results would not be very interesting.
 </div>
 </div>
 
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">Natural gas</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org6f5ec79" class="outline-3">
+<h3 id="org6f5ec79">Natural gas</h3>
+<div class="outline-text-3" id="text-org6f5ec79">
 <p>
 For a given level of occupancy of the retreat center it would be
 natural to consider gas consumption as consisting of two parts:
 </p>
 <ul class="org-ul">
 <li>a base rate that doesn't change significantly from day to day,
-and
-</li>
+and</li>
 <li>an additional rate that scales with the outdoor
-temperature. (The colder it gets the greater this part.)
-</li>
+temperature. (The colder it gets the greater this part.)</li>
 </ul>
 
 <p>
@@ -380,41 +444,41 @@ per day to degrees Fahrenheit. 95% confidence intervals are
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">&#xa0;</td>
-<td class="right">min</td>
-<td class="right">max</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">min</td>
+<td class="org-right">max</td>
 </tr>
 
 <tr>
-<td class="left">IdleScale</td>
-<td class="right">0.48</td>
-<td class="right">0.65</td>
+<td class="org-left">IdleScale</td>
+<td class="org-right">0.48</td>
+<td class="org-right">0.65</td>
 </tr>
 
 <tr>
-<td class="left">SesshinScale</td>
-<td class="right">1.05</td>
-<td class="right">1.28</td>
+<td class="org-left">SesshinScale</td>
+<td class="org-right">1.05</td>
+<td class="org-right">1.28</td>
 </tr>
 
 <tr>
-<td class="left">SimtScale</td>
-<td class="right">1.33</td>
-<td class="right">1.99</td>
+<td class="org-left">SimtScale</td>
+<td class="org-right">1.33</td>
+<td class="org-right">1.99</td>
 </tr>
 
 <tr>
-<td class="left">UrScale</td>
-<td class="right">1.32</td>
-<td class="right">2.23</td>
+<td class="org-left">UrScale</td>
+<td class="org-right">1.32</td>
+<td class="org-right">2.23</td>
 </tr>
 </tbody>
 </table>
@@ -457,9 +521,9 @@ predictions for times that are either idle, sesshin, SIMT or UR.)
 </div>
 </div>
 
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">Electricity</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org9268f3e" class="outline-3">
+<h3 id="org9268f3e">Electricity</h3>
+<div class="outline-text-3" id="text-org9268f3e">
 <p>
 For the period under consideration electricity usage did not vary
 with outside air temperature in a significant way. The data only
@@ -471,41 +535,41 @@ per day for idle and occupied periods.
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">&#xa0;</td>
-<td class="right">min</td>
-<td class="right">max</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">min</td>
+<td class="org-right">max</td>
 </tr>
 
 <tr>
-<td class="left">Idle</td>
-<td class="right">101.03</td>
-<td class="right">114.38</td>
+<td class="org-left">Idle</td>
+<td class="org-right">101.03</td>
+<td class="org-right">114.38</td>
 </tr>
 
 <tr>
-<td class="left">Sesshin</td>
-<td class="right">277.78</td>
-<td class="right">312.61</td>
+<td class="org-left">Sesshin</td>
+<td class="org-right">277.78</td>
+<td class="org-right">312.61</td>
 </tr>
 
 <tr>
-<td class="left">SIMT</td>
-<td class="right">207.83</td>
-<td class="right">252.79</td>
+<td class="org-left">SIMT</td>
+<td class="org-right">207.83</td>
+<td class="org-right">252.79</td>
 </tr>
 
 <tr>
-<td class="left">UR</td>
-<td class="right">287.25</td>
-<td class="right">332.21</td>
+<td class="org-left">UR</td>
+<td class="org-right">287.25</td>
+<td class="org-right">332.21</td>
 </tr>
 </tbody>
 </table>
@@ -534,9 +598,9 @@ dollars respectively.
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Details</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org17675ab" class="outline-2">
+<h2 id="org17675ab">Details</h2>
+<div class="outline-text-2" id="text-org17675ab">
 <p>
 The natural gas model is
 \[
@@ -586,71 +650,67 @@ is the average degrees below 65 for the period, or in other words,
 The &alpha; parameter estimates and their standard errors look as
 follows:
 </p>
-<p>
- 1 
-23
-</p>
 <table border="2" cellpadding="3">
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">&#xa0;</td>
-<td class="right">Estimate</td>
-<td class="right">Std. Error</td>
-<td class="right">t value</td>
-<td class="right">Pr(&gt; &vert; t &vert; )</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Estimate</td>
+<td class="org-right">Std. Error</td>
+<td class="org-right">t value</td>
+<td class="org-right">Pr(&gt; &vert; t &vert; )</td>
 </tr>
 
 <tr>
-<td class="left">&alpha;<sub>0</sub></td>
-<td class="right">5.53</td>
-<td class="right">1.46</td>
-<td class="right">3.79</td>
-<td class="right">0.00</td>
+<td class="org-left">&alpha;<sub>0</sub></td>
+<td class="org-right">5.53</td>
+<td class="org-right">1.46</td>
+<td class="org-right">3.79</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&alpha;<sub>1</sub></td>
-<td class="right">0.57</td>
-<td class="right">0.04</td>
-<td class="right">13.17</td>
-<td class="right">0.00</td>
+<td class="org-left">&alpha;<sub>1</sub></td>
+<td class="org-right">0.57</td>
+<td class="org-right">0.04</td>
+<td class="org-right">13.17</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&alpha;<sub>2</sub></td>
-<td class="right">1.16</td>
-<td class="right">0.06</td>
-<td class="right">20.42</td>
-<td class="right">0.00</td>
+<td class="org-left">&alpha;<sub>2</sub></td>
+<td class="org-right">1.16</td>
+<td class="org-right">0.06</td>
+<td class="org-right">20.42</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&alpha;<sub>3</sub></td>
-<td class="right">1.66</td>
-<td class="right">0.17</td>
-<td class="right">9.90</td>
-<td class="right">0.00</td>
+<td class="org-left">&alpha;<sub>3</sub></td>
+<td class="org-right">1.66</td>
+<td class="org-right">0.17</td>
+<td class="org-right">9.90</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&alpha;<sub>4</sub></td>
-<td class="right">1.77</td>
-<td class="right">0.23</td>
-<td class="right">7.61</td>
-<td class="right">0.00</td>
+<td class="org-left">&alpha;<sub>4</sub></td>
+<td class="org-right">1.77</td>
+<td class="org-right">0.23</td>
+<td class="org-right">7.61</td>
+<td class="org-right">0.00</td>
 </tr>
 </tbody>
 </table>
@@ -677,55 +737,55 @@ where \(y\) is electricity consumption in kWh per day and the
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">&#xa0;</td>
-<td class="right">Estimate</td>
-<td class="right">Std. Error</td>
-<td class="right">t value</td>
-<td class="right">Pr(&gt; &vert; t &vert; )</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">Estimate</td>
+<td class="org-right">Std. Error</td>
+<td class="org-right">t value</td>
+<td class="org-right">Pr(&gt; &vert; t &vert; )</td>
 </tr>
 
 <tr>
-<td class="left">&beta;<sub>1</sub></td>
-<td class="right">107.70</td>
-<td class="right">3.41</td>
-<td class="right">31.61</td>
-<td class="right">0.00</td>
+<td class="org-left">&beta;<sub>1</sub></td>
+<td class="org-right">107.70</td>
+<td class="org-right">3.41</td>
+<td class="org-right">31.61</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&beta;<sub>2</sub></td>
-<td class="right">295.20</td>
-<td class="right">8.88</td>
-<td class="right">33.23</td>
-<td class="right">0.00</td>
+<td class="org-left">&beta;<sub>2</sub></td>
+<td class="org-right">295.20</td>
+<td class="org-right">8.88</td>
+<td class="org-right">33.23</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&beta;<sub>3</sub></td>
-<td class="right">230.31</td>
-<td class="right">11.47</td>
-<td class="right">20.08</td>
-<td class="right">0.00</td>
+<td class="org-left">&beta;<sub>3</sub></td>
+<td class="org-right">230.31</td>
+<td class="org-right">11.47</td>
+<td class="org-right">20.08</td>
+<td class="org-right">0.00</td>
 </tr>
 
 <tr>
-<td class="left">&beta;<sub>4</sub></td>
-<td class="right">309.73</td>
-<td class="right">11.47</td>
-<td class="right">27.00</td>
-<td class="right">0.00</td>
+<td class="org-left">&beta;<sub>4</sub></td>
+<td class="org-right">309.73</td>
+<td class="org-right">11.47</td>
+<td class="org-right">27.00</td>
+<td class="org-right">0.00</td>
 </tr>
 </tbody>
 </table>
@@ -733,8 +793,7 @@ where \(y\) is electricity consumption in kWh per day and the
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2018-05-30 Wed 07:46</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.0.50.3 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="date">Created: 2018-06-09 Sat 06:46</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
