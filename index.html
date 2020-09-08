@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-06-15 Mon 15:01 -->
+<!-- 2020-09-08 Tue 06:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Chapin Mill Energy</title>
@@ -265,13 +265,13 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Chapin Mill Energy</h1>
-<div id="outline-container-orgba98e80" class="outline-2">
-<h2 id="orgba98e80">Energy Comparisons</h2>
-<div class="outline-text-2" id="text-orgba98e80">
+<div id="outline-container-org19617ea" class="outline-2">
+<h2 id="org19617ea">Energy Comparisons</h2>
+<div class="outline-text-2" id="text-org19617ea">
 </div>
-<div id="outline-container-org35d49de" class="outline-3">
-<h3 id="org35d49de">Energy Consumption and Weather</h3>
-<div class="outline-text-3" id="text-org35d49de">
+<div id="outline-container-orgb694d57" class="outline-3">
+<h3 id="orgb694d57">Energy Consumption and Weather</h3>
+<div class="outline-text-3" id="text-orgb694d57">
 <p>
 The plot below describes outdoor air temperatures and the rate of
 retreat center energy consumption for the past few months. These
@@ -330,7 +330,7 @@ dollar cost&#x2014;over all times of the year and over all events.
 
 <p>
 To be slightly more precise, 95% of the time the observed
-electricity power consumption was less than <code>309</code>
+electricity power consumption was less than <code>305</code>
 kWh per day, gas consumption was less than
 <code>47</code> hundred cubic feet per day and the
 overall energy cost was less than <code>53</code> dollars per
@@ -420,9 +420,9 @@ the results would not be very interesting.
 </div>
 </div>
 
-<div id="outline-container-orgabb08b1" class="outline-3">
-<h3 id="orgabb08b1">Natural gas</h3>
-<div class="outline-text-3" id="text-orgabb08b1">
+<div id="outline-container-orgb5a5372" class="outline-3">
+<h3 id="orgb5a5372">Natural gas</h3>
+<div class="outline-text-3" id="text-orgb5a5372">
 <p>
 For a given level of occupancy of the retreat center it would be
 natural to consider gas consumption as consisting of two parts:
@@ -454,10 +454,48 @@ scaling factors relate gas consumption in ccf (100s of cubic feet)
 per day to degrees Fahrenheit. 95% confidence intervals are
 </p>
 
-<p>
-Error in ascii(gas<sub>table</sub>(gm), include.colnames = TRUE, include.rownames = TRUE,  : 
-  could not find function "ascii"
-</p>
+<table border="2" cellspacing="0" cellpadding="3" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">min</td>
+<td class="org-right">max</td>
+</tr>
+
+<tr>
+<td class="org-left">IdleScale</td>
+<td class="org-right">0.48</td>
+<td class="org-right">0.65</td>
+</tr>
+
+<tr>
+<td class="org-left">SesshinScale</td>
+<td class="org-right">1.05</td>
+<td class="org-right">1.28</td>
+</tr>
+
+<tr>
+<td class="org-left">SimtScale</td>
+<td class="org-right">1.33</td>
+<td class="org-right">1.99</td>
+</tr>
+
+<tr>
+<td class="org-left">UrScale</td>
+<td class="org-right">1.32</td>
+<td class="org-right">2.23</td>
+</tr>
+</tbody>
+</table>
 
 <p>
 Roughly speaking these imply that the incremental consumption
@@ -497,9 +535,9 @@ predictions for times that are either idle, sesshin, SIMT or UR.)
 </div>
 </div>
 
-<div id="outline-container-org8e2bb6f" class="outline-3">
-<h3 id="org8e2bb6f">Electricity</h3>
-<div class="outline-text-3" id="text-org8e2bb6f">
+<div id="outline-container-orgcd3d2ac" class="outline-3">
+<h3 id="orgcd3d2ac">Electricity</h3>
+<div class="outline-text-3" id="text-orgcd3d2ac">
 <p>
 For the period under consideration electricity usage did not vary
 with outside air temperature in a significant way. The data only
@@ -507,10 +545,48 @@ established separate estimates of electricity consumption in kWh
 per day for idle and occupied periods.
 </p>
 
-<p>
-Error in ascii(kwh<sub>table</sub>(gm), include.colnames = TRUE, include.rownames = TRUE,  : 
-  could not find function "ascii"
-</p>
+<table border="2" cellspacing="0" cellpadding="3" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">min</td>
+<td class="org-right">max</td>
+</tr>
+
+<tr>
+<td class="org-left">Idle</td>
+<td class="org-right">101.03</td>
+<td class="org-right">114.38</td>
+</tr>
+
+<tr>
+<td class="org-left">Sesshin</td>
+<td class="org-right">277.78</td>
+<td class="org-right">312.61</td>
+</tr>
+
+<tr>
+<td class="org-left">SIMT</td>
+<td class="org-right">207.83</td>
+<td class="org-right">252.79</td>
+</tr>
+
+<tr>
+<td class="org-left">UR</td>
+<td class="org-right">287.25</td>
+<td class="org-right">332.21</td>
+</tr>
+</tbody>
+</table>
 
 <p>
 On average the retreat center consumes <code>108</code> kWh per
@@ -536,9 +612,9 @@ dollars respectively.
 </div>
 </div>
 
-<div id="outline-container-org546a9b3" class="outline-2">
-<h2 id="org546a9b3">Details</h2>
-<div class="outline-text-2" id="text-org546a9b3">
+<div id="outline-container-orga9827f8" class="outline-2">
+<h2 id="orga9827f8">Details</h2>
+<div class="outline-text-2" id="text-orga9827f8">
 <p>
 The natural gas model is
 \[
@@ -588,10 +664,71 @@ is the average degrees below 65 for the period, or in other words,
 The &alpha; parameter estimates and their standard errors look as
 follows:
 </p>
-<p>
-Error in ascii(mc, include.colnames = TRUE, include.rownames = TRUE, header = TRUE,  (from report.org!ZIoyII#14) : 
-  could not find function "ascii"
-</p>
+<table border="2" cellspacing="0" cellpadding="3" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">Estimate</th>
+<th scope="col" class="org-right">Std.Error</th>
+<th scope="col" class="org-right">tvalue</th>
+<th scope="col" class="org-right">Pr(&gt; &vert; t &vert; )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&alpha;<sub>0</sub></td>
+<td class="org-right">5.53</td>
+<td class="org-right">1.46</td>
+<td class="org-right">3.79</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&alpha;<sub>1</sub></td>
+<td class="org-right">0.57</td>
+<td class="org-right">0.04</td>
+<td class="org-right">13.17</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&alpha;<sub>2</sub></td>
+<td class="org-right">1.16</td>
+<td class="org-right">0.06</td>
+<td class="org-right">20.42</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&alpha;<sub>3</sub></td>
+<td class="org-right">1.66</td>
+<td class="org-right">0.17</td>
+<td class="org-right">9.90</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&alpha;<sub>4</sub></td>
+<td class="org-right">1.77</td>
+<td class="org-right">0.23</td>
+<td class="org-right">7.61</td>
+<td class="org-right">0.00</td>
+</tr>
+</tbody>
+</table>
 
 <p>
 Similarly the electricity model is
@@ -611,15 +748,68 @@ Similarly the electricity model is
 where \(y\) is electricity consumption in kWh per day and the
 \(\epsilon\) are error.  The estimates and errors are:
 </p>
-<p>
-Error in ascii(mc, include.colnames = TRUE, include.rownames = TRUE, header = TRUE,  : 
-  could not find function "ascii"
-</p>
+<table border="2" cellspacing="0" cellpadding="3" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">Estimate</th>
+<th scope="col" class="org-right">Std.Error</th>
+<th scope="col" class="org-right">tvalue</th>
+<th scope="col" class="org-right">Pr(&gt; &vert; t &vert; )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&beta;<sub>1</sub></td>
+<td class="org-right">107.70</td>
+<td class="org-right">3.41</td>
+<td class="org-right">31.61</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&beta;<sub>2</sub></td>
+<td class="org-right">295.20</td>
+<td class="org-right">8.88</td>
+<td class="org-right">33.23</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&beta;<sub>3</sub></td>
+<td class="org-right">230.31</td>
+<td class="org-right">11.47</td>
+<td class="org-right">20.08</td>
+<td class="org-right">0.00</td>
+</tr>
+
+<tr>
+<td class="org-left">&beta;<sub>4</sub></td>
+<td class="org-right">309.73</td>
+<td class="org-right">11.47</td>
+<td class="org-right">27.00</td>
+<td class="org-right">0.00</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2020-06-15 Mon 15:01</p>
+<p class="date">Created: 2020-09-08 Tue 06:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
