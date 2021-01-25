@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-11-15 Sun 10:45 -->
+<!-- 2021-01-25 Mon 16:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Chapin Mill Energy</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content=" @@latex:\mbox{}@@" />
+<meta name="author" content="@@latex:\mbox{}@@" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -194,26 +194,50 @@
   /*]]>*/-->
 </style>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -241,13 +265,13 @@
 <body>
 <div id="content">
 <h1 class="title">Chapin Mill Energy</h1>
-<div id="outline-container-org0506443" class="outline-2">
-<h2 id="org0506443">Energy Comparisons</h2>
-<div class="outline-text-2" id="text-org0506443">
+<div id="outline-container-orgfcf976f" class="outline-2">
+<h2 id="orgfcf976f">Energy Comparisons</h2>
+<div class="outline-text-2" id="text-orgfcf976f">
 </div>
-<div id="outline-container-org387a536" class="outline-3">
-<h3 id="org387a536">Energy Consumption and Weather</h3>
-<div class="outline-text-3" id="text-org387a536">
+<div id="outline-container-orgffb2d4a" class="outline-3">
+<h3 id="orgffb2d4a">Energy Consumption and Weather</h3>
+<div class="outline-text-3" id="text-orgffb2d4a">
 <p>
 The plot below describes outdoor air temperatures and the rate of
 retreat center energy consumption for the past few months. These
@@ -284,7 +308,7 @@ energy consumption.
 </p>
 
 
-<div id="org9e3a254" class="figure">
+<div class="figure">
 <p><img src="energy.png" alt="energy.png" />
 </p>
 </div>
@@ -299,17 +323,17 @@ dollar cost&#x2014;over all times of the year and over all events.
 </p>
 
 
-<div id="org38f37a9" class="figure">
+<div class="figure">
 <p><img src="hist.png" alt="hist.png" />
 </p>
 </div>
 
 <p>
 To be slightly more precise, 95% of the time the observed
-electricity power consumption was less than <code>303</code>
+electricity power consumption was less than <code>300</code>
 kWh per day, gas consumption was less than
-<code>46</code> hundred cubic feet per day and the
-overall energy cost was less than <code>53</code> dollars per
+<code>45</code> hundred cubic feet per day and the
+overall energy cost was less than <code>52</code> dollars per
 day.
 </p>
 
@@ -336,7 +360,7 @@ within 45 and 60 dollars.
 </p>
 
 
-<div id="org506f82e" class="figure">
+<div class="figure">
 <p><img src="regime.png" alt="regime.png" />
 </p>
 </div>
@@ -366,7 +390,7 @@ heated for sesshin setup.)
 </p>
 
 
-<div id="org8634c9f" class="figure">
+<div class="figure">
 <p><img src="energy2.png" alt="energy2.png" />
 </p>
 </div>
@@ -382,7 +406,7 @@ value is the average of the temperature readings over that period.
 </p>
 
 
-<div id="org61b3f10" class="figure">
+<div class="figure">
 <p><img src="scatter.png" alt="scatter.png" />
 </p>
 </div>
@@ -396,9 +420,9 @@ the results would not be very interesting.
 </div>
 </div>
 
-<div id="outline-container-org0253652" class="outline-3">
-<h3 id="org0253652">Natural gas</h3>
-<div class="outline-text-3" id="text-org0253652">
+<div id="outline-container-orgaa3caf6" class="outline-3">
+<h3 id="orgaa3caf6">Natural gas</h3>
+<div class="outline-text-3" id="text-orgaa3caf6">
 <p>
 For a given level of occupancy of the retreat center it would be
 natural to consider gas consumption as consisting of two parts:
@@ -504,16 +528,16 @@ predictions for times that are either idle, sesshin, SIMT or UR.)
 </p>
 
 
-<div id="orgc9f73f4" class="figure">
+<div class="figure">
 <p><img src="diagnostic.png" alt="diagnostic.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd0a5271" class="outline-3">
-<h3 id="orgd0a5271">Electricity</h3>
-<div class="outline-text-3" id="text-orgd0a5271">
+<div id="outline-container-org95a42f5" class="outline-3">
+<h3 id="org95a42f5">Electricity</h3>
+<div class="outline-text-3" id="text-org95a42f5">
 <p>
 For the period under consideration electricity usage did not vary
 with outside air temperature in a significant way. The data only
@@ -588,9 +612,9 @@ dollars respectively.
 </div>
 </div>
 
-<div id="outline-container-org5fc23f8" class="outline-2">
-<h2 id="org5fc23f8">Details</h2>
-<div class="outline-text-2" id="text-org5fc23f8">
+<div id="outline-container-org3b45e9e" class="outline-2">
+<h2 id="org3b45e9e">Details</h2>
+<div class="outline-text-2" id="text-org3b45e9e">
 <p>
 The natural gas model is
 \[
@@ -785,8 +809,8 @@ where \(y\) is electricity consumption in kWh per day and the
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2020-11-15 Sun 10:45</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2021-01-25 Mon 16:30</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
