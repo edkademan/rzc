@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-16 Mon 07:56 -->
+<!-- 2021-10-13 Wed 15:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Chapin Mill Energy</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="@@latex:\mbox{}@@" />
+<meta name="author" content=" @@latex:\mbox{}@@" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -194,50 +194,26 @@
   /*]]>*/-->
 </style>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -265,13 +241,13 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Chapin Mill Energy</h1>
-<div id="outline-container-org44e6073" class="outline-2">
-<h2 id="org44e6073">Energy Comparisons</h2>
-<div class="outline-text-2" id="text-org44e6073">
+<div id="outline-container-org4cc16b3" class="outline-2">
+<h2 id="org4cc16b3">Energy Comparisons</h2>
+<div class="outline-text-2" id="text-org4cc16b3">
 </div>
-<div id="outline-container-orgf120ca8" class="outline-3">
-<h3 id="orgf120ca8">Energy Consumption and Weather</h3>
-<div class="outline-text-3" id="text-orgf120ca8">
+<div id="outline-container-orgb89ad13" class="outline-3">
+<h3 id="orgb89ad13">Energy Consumption and Weather</h3>
+<div class="outline-text-3" id="text-orgb89ad13">
 <p>
 The plot below describes outdoor air temperatures and the rate of
 retreat center energy consumption for the past few months. These
@@ -308,7 +284,7 @@ energy consumption.
 </p>
 
 
-<div class="figure">
+<div id="orgafb9c36" class="figure">
 <p><img src="energy.png" alt="energy.png" />
 </p>
 </div>
@@ -323,7 +299,7 @@ dollar cost&#x2014;over all times of the year and over all events.
 </p>
 
 
-<div class="figure">
+<div id="org3be2ddc" class="figure">
 <p><img src="hist.png" alt="hist.png" />
 </p>
 </div>
@@ -360,7 +336,7 @@ within 45 and 60 dollars.
 </p>
 
 
-<div class="figure">
+<div id="org9bf586c" class="figure">
 <p><img src="regime.png" alt="regime.png" />
 </p>
 </div>
@@ -390,7 +366,7 @@ heated for sesshin setup.)
 </p>
 
 
-<div class="figure">
+<div id="org1a901fb" class="figure">
 <p><img src="energy2.png" alt="energy2.png" />
 </p>
 </div>
@@ -406,7 +382,7 @@ value is the average of the temperature readings over that period.
 </p>
 
 
-<div class="figure">
+<div id="org3b4ee99" class="figure">
 <p><img src="scatter.png" alt="scatter.png" />
 </p>
 </div>
@@ -420,9 +396,9 @@ the results would not be very interesting.
 </div>
 </div>
 
-<div id="outline-container-orgad3665a" class="outline-3">
-<h3 id="orgad3665a">Natural gas</h3>
-<div class="outline-text-3" id="text-orgad3665a">
+<div id="outline-container-org69d1679" class="outline-3">
+<h3 id="org69d1679">Natural gas</h3>
+<div class="outline-text-3" id="text-org69d1679">
 <p>
 For a given level of occupancy of the retreat center it would be
 natural to consider gas consumption as consisting of two parts:
@@ -528,16 +504,16 @@ predictions for times that are either idle, sesshin, SIMT or UR.)
 </p>
 
 
-<div class="figure">
+<div id="org6e52810" class="figure">
 <p><img src="diagnostic.png" alt="diagnostic.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org72d7e4b" class="outline-3">
-<h3 id="org72d7e4b">Electricity</h3>
-<div class="outline-text-3" id="text-org72d7e4b">
+<div id="outline-container-org12aa3c7" class="outline-3">
+<h3 id="org12aa3c7">Electricity</h3>
+<div class="outline-text-3" id="text-org12aa3c7">
 <p>
 For the period under consideration electricity usage did not vary
 with outside air temperature in a significant way. The data only
@@ -612,9 +588,9 @@ dollars respectively.
 </div>
 </div>
 
-<div id="outline-container-org4237876" class="outline-2">
-<h2 id="org4237876">Details</h2>
-<div class="outline-text-2" id="text-org4237876">
+<div id="outline-container-org13dcd92" class="outline-2">
+<h2 id="org13dcd92">Details</h2>
+<div class="outline-text-2" id="text-org13dcd92">
 <p>
 The natural gas model is
 \[
@@ -809,8 +785,8 @@ where \(y\) is electricity consumption in kWh per day and the
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2021-08-16 Mon 07:56</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2021-10-13 Wed 15:34</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
