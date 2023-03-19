@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-16 Mon 05:14 -->
+<!-- 2023-03-19 Sun 05:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Chapin Mill Energy</title>
@@ -193,38 +193,49 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Chapin Mill Energy</h1>
-<div id="outline-container-org8f8fd15" class="outline-2">
-<h2 id="org8f8fd15">Energy Comparisons</h2>
-<div class="outline-text-2" id="text-org8f8fd15">
+<div id="outline-container-org00c6984" class="outline-2">
+<h2 id="org00c6984">Energy Comparisons</h2>
+<div class="outline-text-2" id="text-org00c6984">
 </div>
-<div id="outline-container-org07033db" class="outline-3">
-<h3 id="org07033db">Energy Consumption and Weather</h3>
-<div class="outline-text-3" id="text-org07033db">
+<div id="outline-container-org66fa080" class="outline-3">
+<h3 id="org66fa080">Energy Consumption and Weather</h3>
+<div class="outline-text-3" id="text-org66fa080">
 <p>
 The plot below describes outdoor air temperatures and the rate of
 retreat center energy consumption for the past few months. These
@@ -261,7 +272,7 @@ energy consumption.
 </p>
 
 
-<div id="org68b28ba" class="figure">
+<div id="orgafc4468" class="figure">
 <p><img src="energy.png" alt="energy.png" />
 </p>
 </div>
@@ -277,7 +288,7 @@ patterns.
 </p>
 
 
-<div id="org18c377b" class="figure">
+<div id="org1c6e862" class="figure">
 <p><img src="dollars.png" alt="dollars.png" />
 </p>
 </div>
@@ -292,17 +303,17 @@ dollar cost&#x2014;over all times of the year and over all events.
 </p>
 
 
-<div id="org37048b6" class="figure">
+<div id="org192cf7a" class="figure">
 <p><img src="hist.png" alt="hist.png" />
 </p>
 </div>
 
 <p>
 To be slightly more precise, 95% of the time the observed
-electricity power consumption was less than <code>308</code>
+electricity power consumption was less than <code>309</code>
 kWh per day, gas consumption was less than
 <code>44</code> hundred cubic feet per day and the
-overall energy cost was less than <code>52</code> dollars per
+overall energy cost was less than <code>53</code> dollars per
 day.
 </p>
 
@@ -329,7 +340,7 @@ within 45 and 60 dollars.
 </p>
 
 
-<div id="orgc35cd0a" class="figure">
+<div id="orge03089d" class="figure">
 <p><img src="regime.png" alt="regime.png" />
 </p>
 </div>
@@ -359,7 +370,7 @@ heated for sesshin setup.)
 </p>
 
 
-<div id="orgaef9295" class="figure">
+<div id="orgcb1e5f9" class="figure">
 <p><img src="energy2.png" alt="energy2.png" />
 </p>
 </div>
@@ -375,7 +386,7 @@ value is the average of the temperature readings over that period.
 </p>
 
 
-<div id="org434cfd2" class="figure">
+<div id="orgb5bf912" class="figure">
 <p><img src="scatter.png" alt="scatter.png" />
 </p>
 </div>
@@ -389,9 +400,9 @@ the results would not be very interesting.
 </div>
 </div>
 
-<div id="outline-container-orga3ed8e0" class="outline-3">
-<h3 id="orga3ed8e0">Natural gas</h3>
-<div class="outline-text-3" id="text-orga3ed8e0">
+<div id="outline-container-orgfc70ff1" class="outline-3">
+<h3 id="orgfc70ff1">Natural gas</h3>
+<div class="outline-text-3" id="text-orgfc70ff1">
 <p>
 For a given level of occupancy of the retreat center it would be
 natural to consider gas consumption as consisting of two parts:
@@ -423,7 +434,7 @@ scaling factors relate gas consumption in ccf (100s of cubic feet)
 per day to degrees Fahrenheit. 95% confidence intervals are
 </p>
 
-<div id="anyzsqsvoc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="cpznkwzumz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
   <table class="gt_table" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead class="gt_header">
@@ -491,16 +502,16 @@ predictions for times that are either idle, sesshin, SIMT or UR.)
 </p>
 
 
-<div id="org20bec75" class="figure">
+<div id="org3edb2e4" class="figure">
 <p><img src="diagnostic.png" alt="diagnostic.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc76a65a" class="outline-3">
-<h3 id="orgc76a65a">Electricity</h3>
-<div class="outline-text-3" id="text-orgc76a65a">
+<div id="outline-container-org8feaf35" class="outline-3">
+<h3 id="org8feaf35">Electricity</h3>
+<div class="outline-text-3" id="text-org8feaf35">
 <p>
 For the period under consideration electricity usage did not vary
 with outside air temperature in a significant way. The data only
@@ -508,7 +519,7 @@ established separate estimates of electricity consumption in kWh
 per day for idle and occupied periods.
 </p>
 
-<div id="gglihdkzpj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="gkaihqiehp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
   <table class="gt_table" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead class="gt_header">
@@ -569,9 +580,9 @@ dollars respectively.
 </div>
 </div>
 
-<div id="outline-container-org6851d23" class="outline-2">
-<h2 id="org6851d23">Summary of Rental Impact</h2>
-<div class="outline-text-2" id="text-org6851d23">
+<div id="outline-container-org666b05a" class="outline-2">
+<h2 id="org666b05a">Summary of Rental Impact</h2>
+<div class="outline-text-2" id="text-org666b05a">
 <p>
 Taking a SIMT retreat to be typical of renters in general and
 assuming the usual costs for gas and electricity
@@ -599,9 +610,9 @@ The corresponding values for idle times are <code>29</code> ccf
 </div>
 </div>
 
-<div id="outline-container-orgfd350f9" class="outline-2">
-<h2 id="orgfd350f9">Details</h2>
-<div class="outline-text-2" id="text-orgfd350f9">
+<div id="outline-container-orgb56e909" class="outline-2">
+<h2 id="orgb56e909">Details</h2>
+<div class="outline-text-2" id="text-orgb56e909">
 <p>
 The natural gas model is
 \[
@@ -652,7 +663,7 @@ The &alpha; parameter estimates and their standard errors look as
 follows:
 </p>
 
-<div id="hjwjpwawcb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jaupquxsbi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
   <table class="gt_table" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead class="gt_header">
@@ -721,7 +732,7 @@ where \(y\) is electricity consumption in kWh per day and the
 \(\epsilon\) are error.  The estimates and errors are:
 </p>
 
-<div id="zsmodofjxc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zrjnsfvbhl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
   <table class="gt_table" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead class="gt_header">
@@ -769,7 +780,7 @@ where \(y\) is electricity consumption in kWh per day and the
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-01-16 Mon 05:14</p>
+<p class="date">Created: 2023-03-19 Sun 05:24</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
